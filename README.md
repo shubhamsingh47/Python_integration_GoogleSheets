@@ -18,6 +18,7 @@ git clone https://github.com/shubhamsingh47/Python_integration_GoogleSheets.git
 cd Python_integration_GoogleSheets
 
 2. Set up your Python environment
+```bash
 conda create -n venv python=3.10
 conda activate venv
 pip install -r requirements.txt
