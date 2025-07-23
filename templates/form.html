@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Data Entry</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <h2>Enter Baby Reading</h2>
+    <form action="/submit" method="post" class="horizontal-form">
+
+        <!-- 🧾 First Row: Core Details -->
+        <div class="top-row">
+            <div class="form-group">
+                <label>Date:</label><input type="date" name="Date" required>
+            </div>
+            <div class="form-group">
+                <label>Day:</label><input type="text" name="Day" required>
+            </div>
+            <div class="form-group">
+                <label>Serial No.:</label><input type="text" name="Serial" required>
+            </div>
+            <div class="form-group">
+                <label>Baby's ID:</label><input type="text" name="BabyID" required>
+            </div>
+            <div class="form-group">
+                <label>Weight:</label><input type="text" name="Weight" required>
+            </div>
+            <div class="form-group">
+                <label>Site:</label><input type="text" name="Site" required>
+            </div>
+            <div class="form-group">
+                <label>Device:</label><input type="text" name="Device" required>
+            </div>
+            <div class="form-group">
+                <label>MBJ20:</label><input type="text" name="MBJ20">
+            </div>
+            <div class="form-group">
+                <label>JM103:</label><input type="text" name="JM103">
+            </div>
+            <div class="form-group">
+                <label>TSB:</label><input type="text" name="TSB">
+            </div>
+        </div>
+
+        <!-- 🔬 Second Row: F1–F10 Factors -->
+        <div class="bottom-row">
+            <h3>F1 to F10:</h3>
+            {% for i in range(1, 11) %}
+            <div class="form-group">
+                <label>F{{i}}:</label><input type="number" name="F{{i}}">
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 🚀 Submit Button -->
+        <div class="submit-row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
