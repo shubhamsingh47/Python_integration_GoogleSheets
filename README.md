@@ -1,6 +1,6 @@
 # Device Data Entry Web App
 
-A lightweight internal tool built using Flask that allows users to enter readings and push the data securely to a Google Sheet and no login or dashboard required.
+A lightweight internal tool built using Flask that allows users to enter readings and push the data securely to a Google Sheet and no login or dashboard required ( Python integration with Google Sheets using FastAPI)
 
 ---
 
