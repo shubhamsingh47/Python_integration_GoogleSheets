@@ -20,29 +20,29 @@ def form(request: Request):
 def submit(
     Date: str = Form(...),
     Day: str = Form(...),
-    Serial: str = Form(...),
-    BabyID: str = Form(...),
+    ID: str = Form(...),
+    Name: str = Form(...),
     Weight: str = Form(...),
     Site: str = Form(...),
-    Device: str = Form(...),
-    MBJ20: str = Form(None),
-    JM103: str = Form(None),
-    TSB: str = Form(None),
-    F1: int = Form(None),
-    F2: int = Form(None),
-    F3: int = Form(None),
-    F4: int = Form(None),
-    F5: int = Form(None),
-    F6: int = Form(None),
-    F7: int = Form(None),
-    F8: int = Form(None),
-    F9: int = Form(None),
-    F10: int = Form(None)
+    Dev: str = Form(...),
+    Old: str = Form(None),
+    new: str = Form(None),
+    Standard: str = Form(None),
+    X1: int = Form(None),
+    X2: int = Form(None),
+    X3: int = Form(None),
+    X4: int = Form(None),
+    X5: int = Form(None),
+    X6: int = Form(None),
+    X7: int = Form(None),
+    X8: int = Form(None),
+    X9: int = Form(None),
+    X10: int = Form(None)
 ):
     sheet = get_sheet(SHEET_ID, WORKSHEET_NAME)
     row = [
-        Date, Day, Serial, BabyID, Weight, Site, Device, MBJ20, JM103, TSB,
-        F1, F2, F3, F4, F5, F6, F7, F8, F9, F10
+        Date, Day, ID, Name, Weight, Site, Dev, old, new, standard,
+        X1, X2, X3, X4, X5, X6, X7, X8, X9, X10
     ]
     sheet.append_row(row)
     return RedirectResponse("/", status_code=303)
